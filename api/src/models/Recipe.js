@@ -16,13 +16,28 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     //resumen de la receta
-    sumary: { 
+    summary: { 
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    //Ranking
+    score: {
+      type: DataTypes.FLOAT,
       allowNull: false,
     },
     //Nivel de "comida saludable"
     healthScore:{ 
-      type: DataTypes.NUMBER,
+      type: DataTypes.FLOAT,
+      allowNull: false,
+    // imágen de la comida
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    // pasos de receta
+    steps: {
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     // identificar que es de DB y que es de API
