@@ -2,9 +2,9 @@ require("dotenv").config();
 const { Recipe, Diet } = require("../db.js");
 const axios = require("axios");
 //const { Op } = require("sequelize");
-const { YOUR_API_KEY } = process.env;
+const { YOUR_API_KEY, URL } = process.env;
 
-// GET RECIPES
+// GET RECIPES BY QUERY
 
 function getRecipes(req, res, next) {
   const nameQuery = req.query.name;
@@ -13,7 +13,7 @@ function getRecipes(req, res, next) {
   if (nameQuery) {
     axios
       .get(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${YOUR_API_KEY}&addRecipeInformation=true&query=${nameQuery}&number=100`
+        `${URL}/recipes/complexSearch?apiKey=${YOUR_API_KEY}&addRecipeInformation=true&query=${nameQuery}&number=100`
       )
       .then((apiResponse) => {
         remoteRecipes = apiResponse.data.results.filter((recipe) => {
@@ -31,7 +31,7 @@ function getRecipes(req, res, next) {
   } else {
     axios
       .get(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${YOUR_API_KEY}&addRecipeInformation=true&number=100`
+        `${URL}/recipes/complexSearch?apiKey=${YOUR_API_KEY}&addRecipeInformation=true&number=100`
       )
       .then((apiResponse) => {
         remoteRecipes = apiResponse.data.results;
@@ -54,9 +54,7 @@ function getRecipeById(req, res, next) {
     });
   } else {
     axios
-      .get(
-        `https://api.spoonacular.com/recipes/${id}/information?apiKey=${YOUR_API_KEY}`
-      )
+      .get(`${URL}/recipes/${id}/information?apiKey=${YOUR_API_KEY}`)
       .then((response) => {
         return res.json({
           title: response.data.title,
