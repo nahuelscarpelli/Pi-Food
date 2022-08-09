@@ -4,4 +4,4 @@ const { getDiets } = require("../controllers/diet.controller");
 
 router.get("/types", getDiets);
 
-module.exports = router;
+module.exports = router; 

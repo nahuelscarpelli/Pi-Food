@@ -19,13 +19,13 @@ function getRecipes(req, res, next) {
         remoteRecipes = apiResponse.data.results.filter((recipe) => {
           return recipe.title.toLowerCase().includes(nameQuery);
         });
-        return Recipe.findAll({ include: [Diet] });
+        return Recipe.findAll({ include: [Diet] }); // llamado a db
       })
       .then((localResponse) => {
         localRecipes = localResponse.filter((recipe) => {
           return recipe.title.toLowerCase().includes(nameQuery);
         });
-        return res.json([...localRecipes, ...remoteRecipes].slice(0, 9));
+        return res.json([...localRecipes, ...remoteRecipes].slice(0, 9)); //final
       })
       .catch((error) => next(error));
   } else {
