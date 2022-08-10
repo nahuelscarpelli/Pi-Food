@@ -1,5 +1,6 @@
 const { Diet } = require("../db.js");
 const axios = require("axios");
+const { YOUR_API_KEY, URL } = process.env;
 
 let diets = [
   {
@@ -34,7 +35,30 @@ let diets = [
   },
 ];
 
+
+ 
+
+
+
+
+
 function getDiets(req, res, next) {
+
+
+//     const resAxios = await axios.get(`${URL}/recipes/complexSearch?apiKey=${YOUR_API_KEY}&addRecipeInformation=true&number=100`);
+//     const { results } = resAxios.data ;
+//     if (results.length > 0) {
+//         let diets = await results?.map((result) => {
+//             return {
+//                 diets: result.diets?.map(element => element), 
+//             }        
+//         })
+//     return response;
+// }
+
+
+
+    
   Diet.findAll()
     .then((response) => {
       if (response.length > 0) {
