@@ -1,0 +1,26 @@
+.navbar {
+    background-color: black;
+    color: white;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.logoimg {
+    width: 40px;
+}
+
+.appTittle {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menulist {
+    list-style: none;
+    display: flex;
+}
+.menulist li {
+    margin: 0 10px;
+}

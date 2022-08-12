@@ -1,7 +1,6 @@
 require("dotenv").config();
 const { Recipe, Diet } = require("../db.js");
 const axios = require("axios");
-//const { Op } = require("sequelize");
 const { YOUR_API_KEY, URL } = process.env;
 
 // GET RECIPES BY QUERY

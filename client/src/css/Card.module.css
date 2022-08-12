@@ -1,0 +1,13 @@
+.infocontainer {
+    margin: 15px;;
+}
+.imgperfil {
+    object-fit: cover;
+    object-position: top;
+    min-height: 175px;
+    max-height: 175px;
+    width: 260px;
+}
+.titlerecipe {
+    font-size: 1.1rem;
+}

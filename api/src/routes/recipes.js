@@ -3,8 +3,8 @@ const router = Router();
 
 const { getRecipes, getRecipeById, createRecipe } = require('../controllers/recipe.controller.js');
 
-router.get('/recipes', getRecipes);
-router.get('/recipes/:idReceta', getRecipeById);
-router.post('/recipe', createRecipe);
+router.get('/', getRecipes);
+router.get('/:idReceta', getRecipeById);
+router.post('/', createRecipe);
 
 module.exports = router;
