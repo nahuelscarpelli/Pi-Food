@@ -1,5 +1,6 @@
 .infocontainer {
-    margin: 15px;;
+    margin: 15px;
+    max-width: 260px;
 }
 .imgperfil {
     object-fit: cover;
@@ -10,4 +11,7 @@
 }
 .titlerecipe {
     font-size: 1.1rem;
+}
+.infocardwidth {
+    max-width: 260px;
 }

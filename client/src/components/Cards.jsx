@@ -27,7 +27,7 @@ export default function Cards() {
               title={therecipes.title}
               score={therecipes.score}
               healthScore={therecipes.healthScore}
-              diets={therecipes.diets}
+              diets={therecipes.diets.join(" · ")}
               summary={therecipes.summary}
               instructions={therecipes.instructions}
             />
