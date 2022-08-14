@@ -4,61 +4,52 @@ const { YOUR_API_KEY, URL } = process.env;
 
 let diets = [
   {
-    name: "Gluten Free",
+    name: "gluten free",
   },
   {
-    name: "Ketogenic",
+    name: "ketogenic",
   },
   {
-    name: "Vegetarian",
+    name: "vegetarian",
   },
   {
-    name: "Lacto-Vegetarian",
+    name: "lacto ovo vegetarian",
   },
   {
-    name: "Ovo-Vegetarian",
+    name: "vegan",
   },
   {
-    name: "Vegan",
+    name: "pescatarian",
   },
   {
-    name: "Pescetarian",
+    name: "paleolithic",
   },
   {
-    name: "Paleo",
+    name: "primal",
   },
   {
-    name: "Primal",
+    name: "whole 30",
   },
   {
-    name: "Whole 30",
+    name: "dairy free",
+  },
+  {
+    name: "fodmap friendly",
   },
 ];
 
-
- 
-
-
-
-
-
 function getDiets(req, res, next) {
+  //     const resAxios = await axios.get(`${URL}/recipes/complexSearch?apiKey=${YOUR_API_KEY}&addRecipeInformation=true&number=100`);
+  //     const { results } = resAxios.data ;
+  //     if (results.length > 0) {
+  //         let diets = await results?.map((result) => {
+  //             return {
+  //                 diets: result.diets?.map(element => element),
+  //             }
+  //         })
+  //     return response;
+  // }
 
-
-//     const resAxios = await axios.get(`${URL}/recipes/complexSearch?apiKey=${YOUR_API_KEY}&addRecipeInformation=true&number=100`);
-//     const { results } = resAxios.data ;
-//     if (results.length > 0) {
-//         let diets = await results?.map((result) => {
-//             return {
-//                 diets: result.diets?.map(element => element), 
-//             }        
-//         })
-//     return response;
-// }
-
-
-
-    
   Diet.findAll()
     .then((response) => {
       if (response.length > 0) {
