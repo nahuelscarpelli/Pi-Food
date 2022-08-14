@@ -6,17 +6,16 @@ export default function NavBar() {
     return (
         <div>
             <div className={styles.navbar}>
-                <div><img className={styles.logoimg} src="logoapp.png" alt="logoapp" /></div>
+                <div><img className={styles.logoimg} src="./client/src/img/Logoapp.png" alt="logoapp" /></div>
                 <div><span className={styles.appTittle}>Henry Food App</span></div>
                 <div>
                     <ul className={styles.menulist}>
                         <li><Link to='/home'><span>Home</span></Link></li>
-                        <li>Create</li>
+                        <li><Link to='/create'><span>Create Recipe</span></Link></li>
                         <li><Link to='/about'><span>About me</span></Link></li>
                     </ul>
                 </div>
             </div>
-
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Card from "./Card";
 import { useDispatch, useSelector } from "react-redux";
-import { obtener } from "../redux/action";
+import { getAll } from "../redux/action";
 
 import styles from "../css/Cards.module.css";
 
@@ -12,7 +12,7 @@ export default function Cards() {
   // useEffect emula con una fc de callback component amount
 
   useEffect(() => {
-    dispatch(obtener());
+    dispatch(getAll());
   }, [dispatch]);
 
   return (
