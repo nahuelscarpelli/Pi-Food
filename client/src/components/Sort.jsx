@@ -1,5 +1,5 @@
 import React from "react";
-import styles from '../css/FilterBar.module.css';
+import styles from "../css/FilterBar.module.css";
 
 export default function Sort() {
     return (
@@ -12,3 +12,4 @@ export default function Sort() {
         </div>
     )
 }
+
