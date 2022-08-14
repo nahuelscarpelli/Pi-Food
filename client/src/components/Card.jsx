@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from 'react-router-dom'
 import styles from "../css/Card.module.css";
 
 export default function Card({ image, title, diets }) {
@@ -17,7 +17,7 @@ export default function Card({ image, title, diets }) {
           <span>{diets}</span>
         </div>
         <div className={styles.buttondetail}>
-          <h4>More Details</h4>
+          <Link to='/recipe:id'>More Details</Link>
         </div>
       </div>
     </div>

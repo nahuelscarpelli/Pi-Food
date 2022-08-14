@@ -4,3 +4,32 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+nav {
+    margin-top: 20px;
+}
+
+ul.pagination {
+    list-style: none;
+    display: inline-flex;
+}
+
+li.paginationlist {
+    cursor: pointer;
+    margin: 1px;
+    width: 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+li.paginationlist:hover {
+    background-color: #222;
+    color: white;
+    transition: all 0.3s ease;
+}
+li.paginationlist:active {
+    background-color: #222;
+    color: white;
+    transition: all 0.3s ease;
+}
