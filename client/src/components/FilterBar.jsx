@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from '../css/FilterBar.module.css';
 import Search from './Search.jsx';
-import Sort from './Sort.jsx'
 import FilterDiet from './Filter.jsx'
 
 export default function FilterBar({ onSearch }) {
@@ -13,9 +12,6 @@ export default function FilterBar({ onSearch }) {
             </div>
             <div>
                 <FilterDiet />
-            </div>
-            <div>
-                <Sort />
             </div>
         </div>
     )
