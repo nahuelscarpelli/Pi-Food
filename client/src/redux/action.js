@@ -7,6 +7,7 @@ export const FILTER_BY_VALUE = "FILTER_BY_VALUE";
 export const ORDER_BY_NAME = "ORDER_BY_NAME";
 export const ORDER_BY_SCORE = "ORDER_BY_SCORE";
 export const GET_DETAIL = "GET_DETAIL";
+export const GET_DIETS = "GET_DIETS;";
 
 // LLAMANDO TODO
 export function getAll() {
@@ -33,7 +34,7 @@ export function getRecipesByName(nameRecipe) {
 
 export function getDetail(id) {
   return async function (dispatch) {
-    let response = await axios.get(`http://localhost:3001/recipes/${id}`); 
+    let response = await axios.get(`http://localhost:3001/recipes/${id}`);
     return dispatch({ type: GET_DETAIL, payload: response.data });
   };
 }
@@ -62,5 +63,26 @@ export function orderByScore(payload) {
   return {
     type: ORDER_BY_SCORE,
     payload,
+  };
+}
+
+// GET DIETS
+
+export function getDiets() {
+  return async function (dispatch) {
+    var response = await axios("http://localhost:3001/diets", {});
+    return dispatch({
+      type: GET_DIETS,
+      payload: response.data,
+    });
+  };
+}
+
+/// POST
+
+export function postRecipe(payload) {
+  return async function () {
+    const response = await axios.post("http://localhost:3001/recipes", payload);
+    return response;
   };
 }

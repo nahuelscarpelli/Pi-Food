@@ -19,7 +19,7 @@ export default function NavBar() {
               </Link>
             </li>
             <li>
-              <Link to="/create">
+              <Link to="/form">
                 <span>Create Recipe</span>
               </Link>
             </li>

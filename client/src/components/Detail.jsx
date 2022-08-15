@@ -28,7 +28,7 @@ export default function Detail(props) {
         <div className={styles.infocardwidth}>
           <p>Diet: </p>
           <span>{recipedetail.diets}</span>
-          <p>Sumary: {recipedetail.summary}</p>
+          <p>Summary: {recipedetail.summary}</p>
           <p>Dish Types: {recipedetail.dishTypes}</p>
           <p>Health Score: {recipedetail.healthScore}</p>
         </div>

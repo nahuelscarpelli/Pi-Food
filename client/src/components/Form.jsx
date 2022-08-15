@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { postRecipe, getdiets } from '../redux/action'
+import { postRecipe, getDiets } from '../redux/action'
 import styles from '../css/Form.module.css'
 
 export default function Form() {
@@ -10,7 +10,7 @@ export default function Form() {
 
     const [input, setInput] = useState({
         title: "",
-        sumary: "",
+        summary: "",
         healthScore: "",
         instructions: "",
         diets: []
@@ -34,10 +34,10 @@ export default function Form() {
         e.preventDefault();
         console.log(input)
         dispatch(postRecipe(input))
-        alert("Created suscessfully")
+        alert("Created")
         setInput({
             title: "",
-            sumary: "",
+            summary: "",
             healthScore: "",
             instructions: "",
             diets: []
@@ -45,19 +45,19 @@ export default function Form() {
     }
 
     useEffect(() => {
-        dispatch(getdiets());
+        dispatch(getDiets());
     },)
 
     return (
         <div className={styles.createform}>
-            <h2>Complete the form to add a new breed of dog</h2>
+            <h2>Complete the form to add a new recipe</h2>
             <form onSubmit={(e)=>handleSubmit(e)}>
                 <div className={styles.inputformcreate}>
                     <input type="text" placeholder='Title' value={input.title} name='title' onChange={(e)=>handleChange(e)}/>
                 </div>
                 <div>
                     <div className={styles.inputformcreate}>
-                        <input type="text" placeholder='Sumary' value={input.sumary} name='sumary' onChange={(e)=>handleChange(e)}/>
+                        <input type="text" placeholder='Summary' value={input.summary} name='summary' onChange={(e)=>handleChange(e)}/>
                     </div>
                 </div>
                 <div>
@@ -71,9 +71,9 @@ export default function Form() {
                 <div className={styles.inputformcreate}>
                     <select onChange={(e) => handleSelect(e)}>
                         <option disabled selected>Select diets</option>
-                        {diets.map((tem) => {
-                            <option value={tem.name}>{tem.name}</option>
-                        })}
+                        {diets.map((d) => (
+                            <option value={d.name}>{d.name}</option>
+                        ))}
                     </select>
                 </div>
                 <div>

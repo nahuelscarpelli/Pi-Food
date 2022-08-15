@@ -5,6 +5,7 @@ import {
   FILTER_BY_VALUE,
   ORDER_BY_NAME,
   ORDER_BY_SCORE,
+  GET_DIETS,
 } from "./action";
 
 const initialState = {
@@ -79,6 +80,11 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         details: action.payload,
+      };
+    case GET_DIETS:
+      return {
+        ...state,
+        diets: action.payload,
       };
     default:
       return state;
