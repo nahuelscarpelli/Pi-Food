@@ -4,6 +4,8 @@ export const GET_ALL = "GET ALL";
 export const RUTA_GET = "http://localhost:3001/recipes";
 export const GET_RECIPES_BY_NAME = "GET_RECIPES_BY_NAME";
 export const FILTER_BY_VALUE = "FILTER_BY_VALUE";
+export const ORDER_BY_NAME = "ORDER_BY_NAME";
+export const ORDER_BY_SCORE = "ORDER_BY_SCORE";
 
 // LLAMANDO TODO
 export function getAll() {
@@ -34,4 +36,21 @@ export function filterRecipesByDiet(payload){
         type: FILTER_BY_VALUE,
         payload
     }
+}
+
+// FILTRANDO POR ORDEN
+
+export function orderByName(payload){
+  return{
+    type: ORDER_BY_NAME,
+    payload
+  }
+}
+  // FILTRANDO POR SCORE
+
+export function orderByScore(payload){
+  return{
+    type: ORDER_BY_SCORE,
+    payload
+  }
 }

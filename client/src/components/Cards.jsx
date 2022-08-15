@@ -30,7 +30,6 @@ export default function Cards() {
 
   return (
     <div>
-      <h2>Henry's Recipes List</h2>
       <div>
         <Pagination
           recipepage={recipepage}
