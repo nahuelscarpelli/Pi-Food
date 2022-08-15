@@ -6,6 +6,7 @@ import Cards from './components/Cards';
 import Landing from './components/Landing'
 import About from './components/About';
 import FilterBar from './components/FilterBar';
+import Detail from './components/Detail';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path={"/home"} component={FilterBar} />
       <Route path={"/home"} component={Cards} />
       <Route path={"/about"} component={About} />
+      <Route path={"/recipes/:id"} component={Detail} />
     </div>
   );
 }

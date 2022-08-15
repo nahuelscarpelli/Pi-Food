@@ -76,6 +76,7 @@ export default function Cards() {
           current.map((therecipes, i) => (
             <Card
               key={i}
+              id={therecipes.id}
               image={therecipes.image}
               title={therecipes.title}
               score={therecipes.score}

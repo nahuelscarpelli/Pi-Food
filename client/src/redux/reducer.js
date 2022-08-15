@@ -1,9 +1,16 @@
-import { GET_ALL, GET_RECIPES_BY_NAME, FILTER_BY_VALUE, ORDER_BY_NAME, ORDER_BY_SCORE } from "./action";
+import {
+  GET_ALL,
+  GET_DETAIL,
+  GET_RECIPES_BY_NAME,
+  FILTER_BY_VALUE,
+  ORDER_BY_NAME,
+  ORDER_BY_SCORE,
+} from "./action";
 
 const initialState = {
   recipes: [],
   totalrecipes: [],
-  details: {},
+  details: [],
   diets: [],
 };
 
@@ -38,34 +45,41 @@ export default function rootReducer(state = initialState, action) {
         ...state,
         recipes: statusFiltered,
       };
-      case ORDER_BY_NAME:
-        let sortedArr = action.payload === 'sort-a-z' ?
-        state.recipes.sort(function(a,b) {
-          if(a.title.toLowerCase() > b.title.toLowerCase()) return 1;
-          else return -1;
-        }) :
-        state.recipes.sort(function(a,b) {
-          if(a.title.toLowerCase() > b.title.toLowerCase()) return -1;
-          else return 1;
-        })
-        return{
-          ...state,
-          recipe: sortedArr
-        }
-        case ORDER_BY_SCORE:
-        let sortedAr = action.payload === 'sort-health-up' ?
-        state.recipes.sort(function(a,b) {
-          if(a.healthScore > b.healthScore) return 1;
-          else return -1;
-        }) :
-        state.recipes.sort(function(a,b) {
-          if(a.healthScore > b.healthScore) return -1;
-          else return 1;
-        })
-        return{
-          ...state,
-          recipe: sortedAr
-        }
+    case ORDER_BY_NAME:
+      let sortedArr =
+        action.payload === "sort-a-z"
+          ? state.recipes.sort(function (a, b) {
+              if (a.title.toLowerCase() > b.title.toLowerCase()) return 1;
+              else return -1;
+            })
+          : state.recipes.sort(function (a, b) {
+              if (a.title.toLowerCase() > b.title.toLowerCase()) return -1;
+              else return 1;
+            });
+      return {
+        ...state,
+        recipe: sortedArr,
+      };
+    case ORDER_BY_SCORE:
+      let sortedAr =
+        action.payload === "sort-health-up"
+          ? state.recipes.sort(function (a, b) {
+              if (a.healthScore > b.healthScore) return 1;
+              else return -1;
+            })
+          : state.recipes.sort(function (a, b) {
+              if (a.healthScore > b.healthScore) return -1;
+              else return 1;
+            });
+      return {
+        ...state,
+        recipe: sortedAr,
+      };
+    case GET_DETAIL:
+      return {
+        ...state,
+        details: action.payload,
+      };
     default:
       return state;
   }

@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from 'react-router-dom'
 import styles from "../css/Card.module.css";
 
-export default function Card({ image, title, diets }) {
+export default function Card({ id, image, title, diets }) {
   return (
     <div>
       <div className={styles.infocontainer}>
@@ -17,7 +17,7 @@ export default function Card({ image, title, diets }) {
           <span>{diets}</span>
         </div>
         <div className={styles.buttondetail}>
-          <Link to='/recipe:id'>More Details</Link>
+          <Link to={`/recipes/${id}`}>More Details</Link>
         </div>
       </div>
     </div>
