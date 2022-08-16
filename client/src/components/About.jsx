@@ -1,9 +1,11 @@
+import styles from "../css/About.module.css";
+
 export default function About() {
 
     return (
         <div>
             <h2>About Nahuel Scarpelli</h2>
-            <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h3>
+            <h3 className={styles.about}>Proyecto individual creado a partir de especificaciones y exigencias de Soy Henry. Elaborado en las con las siguiente tecnologías: Javascript, React, Redux, Express, Sequelize - Postgres, HTML, CSS, NodeJS, npm.</h3>
         </div>
     );
 };

@@ -13,9 +13,10 @@ export default function Filter() {
   }
 
   return (
-    <div className={styles.filterDiet}>
+    <div >
       <div>
         <select
+        className={styles.filterDiet}
           name="filterDiets"
           id="filterDiets"
           onChange={(e) => handleFilterValue(e)}

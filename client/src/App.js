@@ -8,6 +8,7 @@ import About from './components/About';
 import FilterBar from './components/FilterBar';
 import Detail from './components/Detail';
 import Form from './components/Form';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path={"/about"} component={About} />
       <Route path={"/recipes/:id"} component={Detail} />
       <Route path={"/form"} component={Form} />
+      <Route path={"/home"} component={Footer} />
     </div>
   );
 }

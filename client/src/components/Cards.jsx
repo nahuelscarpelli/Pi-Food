@@ -44,8 +44,9 @@ export default function Cards() {
 
   return (
     <div>
-      <div className={styles.sortby}>
+      <div >
         <select
+        className={styles.sortby}
           name="sortRecipes"
           id="sortRecipes"
           onChange={(e) => handleSort(e)}
@@ -55,6 +56,7 @@ export default function Cards() {
           <option value="sort-z-a">Z to A</option>
         </select>
         <select
+        className={styles.sortby}
           name="sortRecipes"
           id="sortRecipes"
           onChange={(e) => handleSortScore(e)}

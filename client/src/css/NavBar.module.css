@@ -1,26 +1,38 @@
 .navbar {
-    background-color: black;
+    background-color: #333;
     color: white;
     height: 60px;
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
     align-items: center;
+    font-weight: bold;
+    
 }
 
 .logoimg {
     width: 40px;
 }
 
-.appTittle {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
 .menulist {
     list-style: none;
     display: flex;
+    text-decoration: none 
+}
+.menulist li a {
+    list-style: none;
+    display: flex;
+    text-decoration: none 
+}
+.botonera{
+    text-decoration: none
 }
 .menulist li {
     margin: 0 10px;
+
+}
+
+.menulist a:visited{
+    color: whitesmoke;
+
 }

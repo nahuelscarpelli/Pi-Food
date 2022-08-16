@@ -1,0 +1,17 @@
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    background-color: #333;
+    color: #333;
+    height: 240px;
+    display: unset;
+    justify-content: space-around;
+    padding: 0 20px;
+    align-content: stretch;
+    flex-direction: column-reverse;
+    align-items: baseline;
+    
+}
+.imgfooter {
+    max-width: 90px;
+}

@@ -14,7 +14,7 @@ export default function NavBar() {
         <div>
           <ul className={styles.menulist}>
             <li>
-              <Link to="/home">
+              <Link to="/home" className={styles.botonera}>
                 <span>Home</span>
               </Link>
             </li>

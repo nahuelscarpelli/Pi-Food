@@ -33,3 +33,12 @@ li.paginationlist:active {
     color: white;
     transition: all 0.3s ease;
 }
+.sortby{
+    height: 21px;
+    border-radius: 48px;
+    border: 0.5px solid lightgrey;
+    width: 26%;
+    padding-right: 32px;
+    padding-left: 8px;
+    cursor: pointer;
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getRecipesByName } from "../redux/action";
-import "../css/FilterBar.module.css";
+import styles from "../css/FilterBar.module.css";
 
 export default function Search() {
   const dispatch = useDispatch();
@@ -22,17 +22,14 @@ export default function Search() {
 
   return (
     <React.Fragment>
-      <form onSubmit={(e)=>handleSubmit(e)}>
+      <form onSubmit={(e)=>handleSubmit(e)}  className={styles.barsearch}>
         <input
-          className="input-search"
+           className={styles.inputsearch}
           type="text"
           placeholder="Search..."
           value={nameRecipe}
           onChange={(e)=>handleInput(e)}
         />
-        <button className="btn-search" type="submit">
-          Search
-        </button>
       </form>
     </React.Fragment>
   );
