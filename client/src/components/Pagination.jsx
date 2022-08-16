@@ -12,9 +12,9 @@ export default function Pagination({ recipepage, stateOnlyRecipes, pagination })
       <ul className={styles.pagination}>
         {pageNumbers &&
           pageNumbers.map((number, k) => (
-            <a key={k} onClick={() => pagination(number, k)}>
+            <button key={k} onClick={() => pagination(number, k)}>
               <li className={styles.paginationlist}>{number}</li>{" "}
-            </a>
+            </button>
           ))}
       </ul>
     </nav>

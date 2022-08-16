@@ -1,3 +1,11 @@
 .about{
-    
+    margin-right: 300px;
+    margin-left: 300px;
+    font-family: 'Cormorant Garamond', serif;
+}
+.abouttitle{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 20px;
 }

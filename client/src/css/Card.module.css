@@ -4,7 +4,6 @@
     width: 700px;
     background: white;
     box-shadow: 0px 11px 17px 0px rgb(0 0 0 / 37%);
-    z-index: -1;
     height: 231px;
     display: inline-flex;
     justify-content: space-evenly;
